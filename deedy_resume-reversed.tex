@@ -1,0 +1,382 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.3 (22/9/2018)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% v1.3 author:
+% Zachary Taylor
+%
+% v1.3 repository:
+% https://github.com/ZDTaylor/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TODO:
+% 1. Add various styling and section options and allow for multiple pages smoothly.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.3:
+% 1. Removed MacFonts version as I have no desire to maintain it nor access to macOS
+% 2. Switched column ordering
+% 3. Changed font styles/colors for easier human readability
+% 4. Added, removed, and rearranged sections to reflect my own experience
+% 5. Hid last updated
+%
+% v1.2:
+% 1. Added publications in place of societies.
+% 2. Collapsed a portion of education.
+% 3. Fixed a bug with alignment of overflowing long last updated dates on the top right.
+%
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-reversed}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\namesection{Conor Stephens}{ %\urlstyle{same}\href{http://example.com}{example.com}| \href{http://example2.co}{example2.co}\\
+\href{mailto:conorstephens@gmail.com}{conorstephens@gmail.com} | \href{tel:+353(0)830310739}{+353 (0) 83 031 0739}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.55\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{EXPERIENCE}
+
+\runsubsection{The University of Limerick}
+\descript{|\space \space Lecturer}
+\location{Jan. 2019 – Present | Limerick, Ireland}
+Taught:\\
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Six games design modules to posgraduates
+\item Two C++ modules to undergraduates
+\end{tightemize}
+\sectionsep
+
+\runsubsection{LERO / Logitech, Limerick}
+\descript{|\space \space Software Developer}
+\location{May 2017 - Jan. 2019 | Limerick, Ireland}
+\begin{tightemize}
+\item C++ Software Development with Unreal Engine
+\item Infer.NET machine learning
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Demonware}
+\descript{|\space \space Software Engineer}
+\location{Jan. 2016 – Aug. 2016 | Dublin, Ireland}
+\begin{tightemize}
+\item Developed web services using Python, Django and AWS
+\item Successfully launched multiple AAA games
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Xamarin}
+\descript{|\space \space Student Partner}
+\location{Sept. 2015 - Jan. 2016 | Limerick, Ireland}
+\begin{tightemize}
+\item Taught mobile app development using C\#
+\item Worked on several sample apps including
+\underline{
+    \href{https://github.com/pierceboggan/Moments}{Moments}
+    }
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{PROJECTS}
+
+\underline
+        {\href
+            {https://store.steampowered.com/app/810250/RACING_GAME/}
+            {\runsubsection{RACING GAME}}}
+\descript{|\space \space ONLINE MULTIPLAYER RACING GAME}
+C++ video game developed using Unreal Engine\\
+Featuring machine learning based skill rating using:\\
+\begin{tightemize}
+    \item Infer.NET
+    \item Tensorflow
+\end{tightemize}
+
+\sectionsep
+
+\underline
+    {\href
+        {https://github.com/Taikatou/EconomyBalance}
+        {\runsubsection{Economy Balance}}}
+\descript{|\space \space RESEARCH PROJECT}
+Research project to understand inflation within virtual economies.\\
+Powered by:
+\begin{tightemize}
+    \item Unity Game Engine
+    \item Tensorflow
+\end{tightemize}
+\sectionsep
+
+\underline
+    {\href
+        {https://taikatou.itch.io/ninja-adventure-gameframe}
+        {\runsubsection{NINJA ADVENTURE}}}
+\descript{|\space \space NARRATIVE ADVENTURE GAME}
+Narrative game made in unique C\# game engine\\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     CONTRIBUTIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{CONTRIBUTIONS}
+\underline
+    {\href
+        {https://www.unrealengine.com/marketplace/en-US/slug/matchmaking-server-function}
+        {\runsubsection{MATCHMAKING PLUGIN}}}
+\\
+Online matchmaking system for Unreal Engine (C++)
+\begin{tightemize}
+    \item Lead Android and iPhone compatibility \\
+    \item Implemented server load balancing \\
+\end{tightemize}
+\sectionsep
+
+\underline
+    {\href
+        {https://docs.unrealengine.com/en-US/Support/Builds/ReleaseNotes/4_23/index.html}
+        {\runsubsection{UNREAL ENGINE 4.23}}}
+\\
+Fixed third person camera replication bug
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Research}
+% \runsubsection{Cornell Robot Learning Lab}
+% \descript{| Researcher}
+% \location{Jan 2014 – Jan 2015 | Ithaca, NY}
+% Worked with \textbf{\href{http://www.cs.cornell.edu/~ashesh/}{Ashesh Jain}} and \textbf{\href{http://www.cs.cornell.edu/~asaxena/}{Prof Ashutosh Saxena}} to create \textbf{PlanIt}, a tool which  learns from large scale user preference feedback to plan robot trajectories in human environments.
+% \sectionsep
+
+% \runsubsection{Cornell Phonetics Lab}
+% \descript{| Head Undergraduate Researcher}
+% \location{Mar 2012 – May 2013 | Ithaca, NY}
+% Led the development of \textbf{QuickTongue}, the first ever breakthrough tongue-controlled game with \textbf{\href{http://conf.ling.cornell.edu/~tilsen/}{Prof Sam Tilsen}} to aid in Linguistics research.
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COMMUNITY SERVICE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Community Service}
+
+% \begin{tabular}{rll}
+% 2013 -- 2018    & Tennessee     & St. Baldrick's Foundation\\https://www.overleaf.com/project/5ddc278ab72aed0001d5a9b6
+% 2014 -- 2017	& Tennessee     & American Cancer Society's Hope Lodge\\
+% 2013 -- 2015    & Tennessee     & Habitat for Humanity\\
+% 2011 -- 2015    & Tennessee     & Special Olympics\\
+% \end{tabular}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SOCIETIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Societies}
+
+% \begin{tabular}{rll}
+% 2018 -- 2018    & National      & Association of Computing Machinery (ACM)\\
+% 2017 -- 2019	& National      & Scrum Alliance Certified ScrumMaster\\
+% 2015 -- 2019    & University    & Shackouls Honors College\\
+% \end{tabular}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Awards}
+% \begin{tabular}{rll}
+% 2015        & 99\textsuperscript{th} percentile & National Merit Scholarship Finalist\\
+% \end{tabular}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Publications}
+% \renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
+% \bibliographystyle{abbrv}
+% \bibliography{publications}
+% \nocite{*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Education} 
+\subsection{University Of Limerick}
+\descript{Phd}
+\descript{Regulating Virtual Economies using Machine Learning}
+\location{Expected Graduation December 2020}
+\sectionsep
+
+~\\
+
+\subsection{University Of Limerick}
+\descript{Bachelor of Science}
+\descript{Major: Computer Science}
+\descript{Minor: Games Development}
+\descript{First Class Honors}
+\location{2013-2017}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     certificates
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{CERTIFICATIONS}
+~\\
+\runsubsection{TensorFlow in Practice}
+~\\
+\descript{deeplearning.ai}
+
+\underline{
+    \href
+        {https://www.coursera.org/account/accomplishments/specialization/TZF8HEU3BHGH?utm_medium=certificate&utm_source=link&utm_campaign=copybutton_certificate}
+        {August 2019}}
+\sectionsep
+
+~\\
+\runsubsection{Intro to Tensorflow}
+~\\
+\descript{Google Cloud}
+
+\underline{
+    \href
+        {https://www.coursera.org/account/accomplishments/verify/NJD7ZKJ76YKA?utm_medium=certificate&utm_source=link&utm_campaign=copybutton_certificate}
+        {March 2019}}
+\sectionsep
+
+~\\
+\runsubsection{Certified Developer}
+~\\
+\descript{XAMARIN MICROSOFT}
+\underline{
+    \href
+        {https://docs.microsoft.com/en-us/users/ConorStephens-4072/}
+        {August 2016}}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{SKILLS}
+\textbullet{}   C++ - Unreal Engine\\
+\textbullet{}   Python\\
+\textbullet{}   Tensorflow\\
+\textbullet{}   Javascript - React.JS\\
+\textbullet{}   C\# - Infer.NET\\
+\textbullet{}   Linux - Webservices\\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links}
+Github://
+\underline{
+    \href{https://github.com/Taikatou}{\bf Taikatou}
+}
+\\
+LinkedIn://
+\underline{
+    \href{https://www.linkedin.com/in/conorstephens/}{\bf conorstephens}
+}
+\\
+Website://
+\underline{
+    \href{http://conorstephens.com}{\bf conorstephens.com}
+}
+\\
+Itch://
+\underline{
+    \href{https://taikatou.itch.io/}{\bf taikatou.itch}
+}
+\sectionsep
+
+
+\end{minipage}
+\end{document}  \documentclass[]{article}
